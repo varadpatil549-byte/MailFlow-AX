@@ -1,0 +1,15 @@
+# MailFlow AX - Python Dependencies
+
+# Outlook / Windows COM automation
+pywin32
+
+# Excel logging and workbook handling
+openpyxl
+
+# Local AI / Ollama integration
+ollama
+AI Engine: Ollama
+Model: Qwen3
+
+# Desktop GUI
+PySide6
