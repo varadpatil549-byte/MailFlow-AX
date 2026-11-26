@@ -1,21 +1,109 @@
-MIT License
+MAILFLOW AX – RESTRICTED SOURCE LICENSE
 
 Copyright (c) 2026 Varad Patil
+All Rights Reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. OWNERSHIP
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+The MailFlow AX software, source code, documentation, configuration,
+designs, assets, and related materials are the intellectual property of
+Varad Patil ("Author"), unless otherwise stated.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+No ownership or intellectual property rights are transferred by making
+this repository publicly available.
+
+2. LIMITED PERMISSION
+
+Permission is granted to individuals to access, view, and study the
+source code for personal, educational, research, evaluation, and
+non-commercial purposes.
+
+This permission does not constitute a transfer of ownership or a
+general license to use, modify, distribute, or commercially exploit the
+Software.
+
+3. RESTRICTIONS
+
+Without prior written permission from the Author, you may NOT:
+
+- Copy or redistribute the Software or substantial portions of it.
+- Publish, mirror, republish, or repackage the Software or its source code.
+- Sell, sublicense, lease, or commercially exploit the Software.
+- Use the Software as part of a commercial product or service.
+- Use the Software to provide a paid service, hosted service, SaaS,
+  automation service, or other commercial offering.
+- Create and distribute derivative works based substantially on the
+  Software.
+- Modify and publicly distribute modified versions of the Software.
+- Repackage the Software as an AI skill, agent skill, plugin, package,
+  library, toolkit, or competing automation product.
+- Use the Software or substantial portions of its implementation to
+  create a substantially similar competing product.
+- Remove or alter copyright, ownership, attribution, or license notices.
+- Represent the Software or derivative implementations as your own work.
+
+4. AGENT SKILLS AND AI SYSTEMS
+
+The source code, workflows, logic, prompts, architecture, and
+implementation patterns contained in this repository may not be copied,
+adapted, wrapped, or repackaged into an AI agent skill, tool, plugin,
+automation package, or similar distributable capability without prior
+written permission from the Author.
+
+Public availability of the repository does not constitute permission for
+any AI platform, agent framework, marketplace, or third party to ingest,
+repackage, redistribute, commercialize, or publish the implementation as
+its own capability.
+
+5. PERSONAL AND NON-COMMERCIAL USE
+
+Individuals may inspect and execute the Software for personal,
+educational, research, testing, and evaluation purposes, provided that
+such use does not violate any other restriction in this license.
+
+6. COMMERCIAL LICENSE
+
+Commercial use, redistribution, integration into a commercial product,
+deployment for a business, or creation of derivative commercial
+software requires a separate written license from the Author.
+
+Commercial licensing terms may be provided at the Author's discretion.
+
+7. THIRD-PARTY COMPONENTS
+
+This license applies only to materials created and owned by the Author.
+
+Third-party libraries, frameworks, models, software, and other
+components remain subject to their respective licenses.
+
+Nothing in this license grants rights to third-party intellectual
+property.
+
+8. NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR
+NON-INFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY ARISING FROM OR IN CONNECTION WITH THE SOFTWARE OR ITS USE.
+
+9. RESERVATION OF RIGHTS
+
+All rights not expressly granted by this license are reserved by the
+Author.
+
+The Author may change, replace, or revoke permissions for future
+versions of the Software at any time, subject to applicable law and
+any rights already granted under a separate written agreement.
+
+10. CONTACT
+
+For commercial licensing, redistribution permission, integration
+permission, or other authorization, contact the Author directly.
+
+Author:
+Varad Patil
+
+Copyright © 2026 Varad Patil. All Rights Reserved.
