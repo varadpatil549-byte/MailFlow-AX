@@ -1,59 +1,105 @@
-# MailFlow AX
+# Multilingual Vendor Helpdesk
 
-### AI-Powered Mailbox Exchange
+### AI-Powered Email Query Triage, Translation & Response Assistant
 
-MailFlow AX is an enterprise-oriented mailbox automation application designed to monitor Outlook mailboxes, classify incoming emails using a local AI engine, allocate emails to appropriate users or folders, move emails automatically, and track subsequent actions.
+![MailFlow AX](Product%20samples/MailFlow%20Ax%20Logo%20on%20White%20Panel.png)
 
-The solution combines **Outlook automation, local AI classification, automated mailbox allocation, action tracking, and Excel-based logging** into a single workflow.
+Multilingual Vendor Helpdesk is a Python-based desktop automation tool designed to help vendor support teams manage multilingual Outlook queries more efficiently.
+
+The application reads vendor emails from Outlook, organizes and prioritizes incoming requests, identifies the source language, translates queries for easier understanding, and assists with preparing professional responses while keeping the final response under human review.
+
+---
+
+## 🖥️ Application Overview
+
+The tool provides a centralized workspace for managing multilingual vendor email queries, reviewing translated content, and preparing AI-assisted responses.
 
 ---
 
 ## Overview
 
-MailFlow AX follows the workflow:
+The application is designed around the workflow:
 
-**Monitor → Classify → Allocate → Move → Track → Log**
+**Read Emails → Triage → Translate → Generate Response → Review → Track & Log**
 
-The application continuously monitors selected Outlook folders, identifies new or recovered emails, sends relevant email content to a local AI classifier, determines the appropriate processing path, performs mailbox movement/allocation, and records the resulting activity.
+It is intended for operational teams handling vendor communications across multiple languages, particularly where email-based queries frequently involve invoices, payments, purchase orders, and other transactional requests.
 
 ---
 
-## Key Capabilities
+## Key Features
 
-### 🤖 AI-Based Email Classification
-Uses a local AI engine to classify mailbox emails without requiring cloud-based AI processing.
+### 📬 Outlook Queue & Priority Triage
 
-### 📬 Automated Mail Allocation
-Routes classified emails to the appropriate users, queues, or target folders according to the configured allocation logic.
+Reads emails from the configured Outlook mailbox and presents them in an organized queue.
 
-### 📁 Automated Mail Movement
-Moves processed emails into their designated Outlook folders after classification and allocation.
+The queue can surface information such as:
 
-### ✅ Action Tracking
-Tracks downstream email actions including:
+- Sender
+- Subject
+- Received time
+- Detected language
+- Priority
+- Processing status
 
-- Reply
-- Reply-All
-- Forward
+Urgent or important queries can be highlighted for faster handling.
 
-### 📊 Operations Dashboard
-Provides a consolidated view of mailbox-processing activity, including:
+---
 
-- Total Emails
-- Allocated
-- Actioned
-- Pending
-- Action Rate
-- AI Confidence
+### 🌍 Multilingual Translation
 
-### ⚡ Live Activity Monitoring
-Displays real-time processing activity, including mailbox monitoring, classification, recovery scans, and email-processing events.
+Supports multilingual vendor communication by translating incoming queries into English for review and understanding.
 
-### 📑 Excel Logging & Reporting
-Maintains processing and action information in an Excel-based log for operational tracking and reporting.
+The workflow can also support preparing a response in the vendor's original language.
 
-### 🔄 Recovery & Checkpoint Processing
-Supports recovery scanning and checkpoint-based processing to reduce the risk of missing emails after interruptions or restarts.
+---
+
+### 🤖 AI Response Assistance
+
+Provides context-aware response suggestions based on the vendor query and translated context.
+
+The generated response is intended as an **assistant-generated draft** and should be reviewed by the user before sending.
+
+---
+
+### 📧 Outlook Integration
+
+Uses the Outlook desktop environment to access mailbox content and support the operational email workflow.
+
+---
+
+### 📝 Query Review
+
+Provides a structured view of:
+
+- Original subject
+- Original vendor message
+- Translated subject
+- Translated message
+- Response draft
+
+This keeps the original context visible during review.
+
+---
+
+### ✅ Manual Review & Send
+
+The tool is designed to keep the final response under human control.
+
+AI-generated or translated content should be reviewed for:
+
+- Accuracy
+- Vendor context
+- Financial information
+- Dates
+- Invoice numbers
+- Sensitive information
+- Tone and business appropriateness
+
+---
+
+### 📊 Operational Tracking
+
+Processing information can be maintained through the project's supporting logs and sample outputs for operational visibility and testing.
 
 ---
 
@@ -61,115 +107,79 @@ Supports recovery scanning and checkpoint-based processing to reduce the risk of
 
 ```text
 Outlook Mailbox
-      │
-      ▼
-Email Monitoring
-      │
-      ▼
-AI Classification
-      │
-      ▼
-Allocation Logic
-      │
-      ▼
-Move to Target Folder
-      │
-      ▼
-Action Tracking
-      │
-      ▼
-Excel Logging & Dashboard
+      ↓
+Read Incoming Emails
+      ↓
+Triage & Prioritize
+      ↓
+Identify Language
+      ↓
+Translate Query
+      ↓
+AI Response Assistance
+      ↓
+Human Review
+      ↓
+Response / Tracking
 ```
 
 ---
 
-## Technology Stack
+## Technology
 
-- **Python**
-- **Microsoft Outlook / Outlook COM**
-- **Local AI / Ollama**
-- **OpenPyXL**
-- **Pandas**
-- **PyWin32**
-- **Excel**
-- **Desktop GUI**
-- **Power BI / reporting integration where applicable**
+The project is built around a Python desktop automation architecture involving:
 
----
-
-## Architecture
-
-MailFlow AX is designed around a modular processing pipeline:
-
-### Mailbox Connector
-Connects to the local Outlook environment and monitors configured mailbox folders.
-
-### AI Classification Layer
-Processes email information using a locally hosted AI model.
-
-### Allocation Engine
-Applies allocation rules and determines the destination user or folder.
-
-### Mail Movement Layer
-Performs the required Outlook folder movement.
-
-### Action Tracker
-Monitors whether processed emails receive a Reply, Reply-All, or Forward action.
-
-### Logging Layer
-Stores processing and action information for auditability, reporting, and dashboard consumption.
-
-### Recovery Layer
-Uses checkpoints and processed-message tracking to support restart and recovery scenarios.
+- Python
+- Microsoft Outlook integration
+- Outlook COM automation
+- AI / LLM-assisted language processing
+- Translation workflow
+- Excel-based supporting data where required
+- Desktop user interface components
 
 ---
 
-## Current Interface
+## Typical Use Cases
 
-The application provides two primary views:
+The application can be adapted for vendor-support scenarios such as:
 
-### Dashboard
-A high-level operational view containing mailbox-processing KPIs and system status.
-
-### Live Activity
-A real-time execution view showing monitoring events, classification activity, recovery information, and processing logs.
-
----
-
-## Example Metrics
-
-The dashboard can surface operational indicators such as:
-
-| Metric | Description |
-|---|---|
-| Total Emails | Emails identified by the processing pipeline |
-| Allocated | Emails successfully allocated |
-| Actioned | Emails with a tracked downstream action |
-| Pending | Emails still awaiting action |
-| Action Rate | Percentage of processed emails with an action |
-| AI Confidence | Confidence returned by the classification process |
+- Invoice-related queries
+- Payment-status requests
+- Purchase-order questions
+- Remittance requests
+- Vendor clarification emails
+- Multilingual shared mailboxes
+- Regional vendor support operations
 
 ---
 
-## Project Structure
+## Repository Structure
 
-The repository contains the MailFlow AX application source, supporting resources, configuration files, documentation, and demonstration assets.
-
-> The exact repository tree may evolve as additional modules and deployment resources are added.
+```text
+.
+├── code/
+│   └── Application source code and supporting modules
+│
+├── product samples/
+│   └── Sample inputs, outputs, and demonstration files
+│
+├── README.md
+├── Requirements.txt
+└── Licence.txt
+```
 
 ---
 
 ## Requirements
 
-Typical requirements include:
+A typical local environment requires:
 
-- Windows environment
+- Windows operating system
 - Microsoft Outlook desktop application
 - Python 3.x
-- Required Python packages listed in the project dependency configuration
-- Ollama or another supported local AI runtime
+- Required Python dependencies listed in `Requirements.txt`
 - Access to the configured Outlook mailbox
-- Microsoft Excel for log/report access
+- Any required local AI/LLM runtime or model used by the implementation
 
 ---
 
@@ -179,98 +189,79 @@ Typical requirements include:
 
 ```bash
 git clone <repository-url>
-cd MailFlow-AX
+cd <repository-folder>
 ```
 
 ### 2. Install dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install -r Requirements.txt
 ```
 
-### 3. Configure the local AI environment
+### 3. Configure the environment
 
-Ensure the required Ollama model is installed and available locally.
+Review the configuration used by the application and ensure:
 
-### 4. Configure Outlook and project settings
+- Outlook is installed and accessible
+- Required mailbox/folder configuration is available
+- Required AI/translation components are available
+- Sample/output locations are configured correctly
 
-Update the project configuration according to the mailbox, allocation folders, users, and processing requirements.
+### 4. Run the application
 
-### 5. Run the application
+Run the project's designated Python entry point from the `code` directory.
 
-```bash
-python <entry-point>.py
-```
-
-> The exact entry-point filename should match the current repository structure.
+The exact entry-point file may vary depending on the current implementation.
 
 ---
 
-## Important Notes
+## Data & Privacy
 
-MailFlow AX is currently a project/application implementation and may contain environment-specific configuration.
+This application can process email content and operational vendor information.
 
-Before deploying in another environment, review:
+Do not commit or distribute:
 
-- Outlook mailbox configuration
-- Target folders
-- Allocation rules
-- AI model configuration
-- Excel log locations
-- User mappings
-- Recovery/checkpoint settings
-
----
-
-## Security & Privacy
-
-MailFlow AX can process mailbox content and operational email information.
-
-Do **not** commit the following to a public repository:
-
-- Real mailbox credentials
+- Passwords
 - Access tokens
 - API keys
-- Passwords
-- Private configuration files
-- Production email logs
-- Confidential customer/company data
-- Personally identifiable information
+- Credentials
+- Production mailbox exports
+- Confidential vendor information
+- Sensitive financial information
+- Private email content
 
-Use sanitized sample data when publishing screenshots, logs, demonstrations, or test files.
+Use sanitized sample data for demonstrations and repository examples.
 
 ---
 
-## Roadmap
+## AI and Human Review
 
-Potential future enhancements include:
+AI-generated translations and response suggestions are intended to assist the operator rather than replace human review.
 
-- Microsoft Graph integration for production deployments
-- Expanded allocation/configuration management
-- Improved AI classification and confidence handling
-- Enhanced analytics and reporting
-- Additional mailbox providers/connectors
-- Centralized configuration management
-- Deployment packaging and installer support
+Before sending a response, verify important information including:
+
+- Invoice numbers
+- Payment amounts
+- Dates
+- Purchase orders
+- Vendor names
+- Account information
+- Commitments or statements made to the vendor
 
 ---
 
 ## Project Status
 
-**Active Development**
+**Active / Demonstration Project**
 
-MailFlow AX is being continuously enhanced with new automation, AI, monitoring, reporting, and operational capabilities.
+This repository contains the implementation and supporting materials for a multilingual vendor-helpdesk automation concept and may evolve with additional integrations, workflow improvements, and operational capabilities.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is distributed under the **Multilingual Vendor Helpdesk Restricted Source License**.
 
----
+The source is available for viewing, study, research, testing, and evaluation. Commercial use, redistribution, repackaging, and derivative distribution require prior written permission.
 
-## Author
-
-**Varad Patil**
-
-Built as part of ongoing work in **automation, AI-enabled operations, mailbox processing, and process improvement**.
+See `Licence.txt` for the complete terms.
